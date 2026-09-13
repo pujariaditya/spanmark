@@ -1,0 +1,41 @@
+[project]
+name = "spanmark"
+version = "0.1.0"
+description = "Segment-level localization of partially spoofed speech, at 20 ms and natively at 160 ms"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Aditya Pujari" }]
+keywords = ["speech", "anti-spoofing", "partial-spoof", "localization", "deepfake"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "torch>=2.0",
+  "torchaudio>=2.0",
+  "soundfile>=0.12",
+  "transformers>=4.40",   # XLS-R front-end: facebook/wav2vec2-xls-r-300m
+  "scipy>=1.10",          # used by audio.atomic_wave_noise and audio.augment
+]
+
+[project.optional-dependencies]
+hub = ["huggingface_hub>=0.23"]
+# scripts/build_resynth.py --methods hifigan; the other three need nothing extra
+resynth = ["speechbrain>=1.0"]
+
+[project.urls]
+Source = "https://github.com/pujariaditya/spanmark"
+Checkpoints = "https://huggingface.co/RootAccess4Life/spanmark"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["spanmark*"]
+

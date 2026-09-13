@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Fetched or derived, never committed
+checkpoints/
+data/
+out/
+*.pt
+*.pt.gz
+*.ckpt
+*.npz

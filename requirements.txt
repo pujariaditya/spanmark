@@ -1,0 +1,15 @@
+# Runtime. `pip install -e .` reads pyproject.toml; this file exists for
+# environments that want a flat pin list.
+numpy>=1.24
+torch>=2.0
+torchaudio>=2.0
+soundfile>=0.12
+transformers>=4.40
+scipy>=1.10
+
+# Fetching the released checkpoints
+huggingface_hub>=0.23
+
+# Optional: only for `build_resynth.py --methods hifigan`
+# speechbrain>=1.0
+

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "spanmark: segment-level localization of partially spoofed speech"
+abstract: >-
+  A two-route localizer for partially spoofed speech. A fine model scores every
+  20 ms segment; a second model predicts 160 ms blocks natively rather than by
+  pooling the fine stream. Segment EER 3.1788 at 160 ms over the full
+  71,237-utterance PartialSpoof evaluation set.
+authors:
+  - family-names: Pujari
+    given-names: Aditya
+version: 0.1.0
+date-released: "2026-09-13"
+license: MIT
+repository-code: "https://github.com/pujariaditya/spanmark"
+url: "https://huggingface.co/RootAccess4Life/spanmark"
+keywords:
+  - speech anti-spoofing
+  - partial spoof
+  - localization

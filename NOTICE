@@ -1,0 +1,37 @@
+spanmark
+Copyright (c) 2026 Aditya Pujari
+
+This product includes software developed by third parties, redistributed here
+under the MIT license. The attribution headers in the source files are part of
+that licence and must be preserved in any redistribution.
+
+--------------------------------------------------------------------------------
+spanmark/audio/atomic_wave_noise.py
+
+  Deterministic timestamp-preserving impulse and stationary-noise atoms adapted
+  from RawBoost, following SentryMao/SAL commit
+  b4e80d1d2fd98f3d8b9a85a47837ab3a73e12485.
+
+  Copyright (c) 2026 Yuchen Mao
+  Copyright (c) 2021 Hemlata Tak et al.
+
+  Both upstream projects distribute this code under the MIT license.
+
+  Only two atoms are retained from RawBoost: the signal-dependent impulse and
+  the stationary signal-independent noise. No filter is applied to the source
+  waveform, so source samples are neither shifted nor mixed across label edges —
+  which is what makes the augmentation safe for a localization task, where a
+  moved sample is a moved label.
+
+--------------------------------------------------------------------------------
+Models
+
+  The XLS-R front-end loads facebook/wav2vec2-xls-r-300m from the HuggingFace
+  hub at build time. That model carries its own licence; see its model card.
+
+--------------------------------------------------------------------------------
+Data
+
+  No corpus audio or labels are redistributed here. PartialSpoof and
+  LlamaPartialSpoof are obtained from their own publishers under their own
+  terms; see the Results section of README.md.
